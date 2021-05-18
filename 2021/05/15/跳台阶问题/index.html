@@ -473,6 +473,8 @@
 <h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><p>public class Solution {<br>    public int jumpFloor(int target) {<br>        if(target == 0 ||target == 1 || target == 2) return target;<br>        int[] dp = new int[target+1];<br>        dp[0] = 0;<br>        dp[1] = 1;<br>        dp[2] = 2;<br>        for(int i = 3; i &lt;= target; i++){<br>            dp[i] = dp[i-1] + dp[i-2];<br>        }<br>        return dp[target];<br>    }<br>}</p>
 <hr>
 <h2 id="动态规划优化"><a href="#动态规划优化" class="headerlink" title="动态规划优化"></a>动态规划优化</h2><p>public class Solution {<br>    public int jumpFloor(int target) {<br>        if(target == 0 ||target == 1 || target == 2) return target;<br>        int pre = 1;<br>        int cur = 2;<br>        for(int i = 3; i &lt;= target; i++){<br>            int sum = pre + cur;<br>            pre = cur;<br>            cur = sum;<br>        }<br>        return cur;<br>    }<br>}</p>
+<hr>
+<h2 id="变态跳台阶"><a href="#变态跳台阶" class="headerlink" title="变态跳台阶"></a>变态跳台阶</h2><p>一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。<br>求该青蛙跳上一个n级的台阶总共有多少种跳法。<br>public class Solution {<br>    public int jumpFloorII(int target) {<br>        if(target &lt;= 2) return target;<br>        int[] dp = new int[target+1];<br>        dp[0] = 1;<br>        dp[1] = 1;<br>        dp[2] = 2;<br>        for(int i = 3; i &lt;= target; i++){<br>            for(int j = 0; j &lt; i; j++){<br>                dp[i] += dp[j];<br>            }<br>        }<br>        return dp[target];<br>    }<br>}</p>
 
                 
             </div>

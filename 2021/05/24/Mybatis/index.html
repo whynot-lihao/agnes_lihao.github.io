@@ -479,9 +479,9 @@
 <hr>
 <h2 id="通过Mapper代理实现自定义接口"><a href="#通过Mapper代理实现自定义接口" class="headerlink" title="通过Mapper代理实现自定义接口"></a>通过Mapper代理实现自定义接口</h2><ol>
 <li>自定义接口，定义相关业务方法。</li>
-<li>编写与方法相对应的Mapper.xml，定义接口方法对应的SQL语句，不需要创建接口实现类。</li>
-<li></li>
+<li>编写与方法相对应的Mapper.xml，定义接口方法对应的SQL语句，不需要创建接口实现类。<br>statement标签可根据SQL执行的业务选择insert/select/upadate/delete。MyBatis框架会根据规则自动创建接口实现类的代理对象。</li>
 </ol>
+<p>-&gt; Mapper.xml中namespace为接口的全类名。<br>-&gt; Mapper.xml中statement的id为接口中对应的方法名。<br>-&gt; Mapper.xml中statement的parameterType和接口中对应的方法的参数类型一致。<br>-&gt; Mapper.xml中statement的resultType和接口中对应方法的返回值类型一致。</p>
 
                 
             </div>
@@ -498,7 +498,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="/about" rel="external nofollow noreferrer">Hao Li</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -521,7 +521,7 @@
                     All articles in this blog are used except for special statements
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     reprint policy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">John Doe</a>
+                    <a href="/about" target="_blank">Hao Li</a>
                     !
                 </span>
             </div>
@@ -741,7 +741,7 @@
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            Hao Li
                             
                         </span>
                     </div>
@@ -778,7 +778,7 @@
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            Hao Li
                             
                         </span>
                     </div>
@@ -978,7 +978,7 @@
                 <span id="year">2019-2021</span>
             
             <span id="year">2019</span>
-            <a href="/about" target="_blank">John Doe</a>
+            <a href="/about" target="_blank">Hao Li</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Comparable?Comparator?, Hexo">
+    <meta name="keywords" content="计算机网络常见面试题, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Comparable?Comparator? | Hexo</title>
+    <title>计算机网络常见面试题 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Comparable?Comparator?</h1>
+                    <h1 class="description center-align post-title">计算机网络常见面试题</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-05-25
+                    2021-12-28
                 </div>
                 
 
@@ -464,17 +464,13 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Comparable"><a href="#Comparable" class="headerlink" title="Comparable"></a>Comparable</h2><p>Comparable接口使用：自然排序</p>
+                <h1 id="一-OSI-与-TCP-IP-各层的结构与功能-都有哪些协议"><a href="#一-OSI-与-TCP-IP-各层的结构与功能-都有哪些协议" class="headerlink" title="一 OSI 与 TCP/IP 各层的结构与功能, 都有哪些协议?"></a>一 OSI 与 TCP/IP 各层的结构与功能, 都有哪些协议?</h1><p><img src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.png" alt="(计算机网络体系结构)"></p>
+<h2 id="1-1-应用层"><a href="#1-1-应用层" class="headerlink" title="1.1 应用层"></a>1.1 应用层</h2><p>应用层(application-layer）的任务是通过应用进程间的交互来完成特定网络应用。应用层协议定义的是应用进程（进程：主机中正在运行的程序）间的通信和交互的规则。对于不同的网络应用需要不同的应用层协议。在互联网中应用层协议很多，如域名系统 DNS，支持万维网应用的 HTTP 协议，支持电子邮件的 SMTP 协议等等。我们把应用层交互的数据单元称为报文。</p>
+<h2 id="1-2-运输层"><a href="#1-2-运输层" class="headerlink" title="1.2 运输层"></a>1.2 运输层</h2><p>运输层(transport layer)的主要任务就是负责向两台主机进程之间的通信提供通用的数据传输服务。应用进程利用该服务传送应用层报文。“通用的”是指并不针对某一个特定的网络应用，而是多种应用可以使用同一个运输层服务。由于一台主机可同时运行多个线程，因此运输层有复用和分用的功能。所谓复用就是指多个应用层进程可同时使用下面运输层的服务，分用和复用相反，是运输层把收到的信息分别交付上面应用层中的相应进程。</p>
+<p>运输层主要使用以下两种协议:</p>
 <ol>
-<li>像String、包装类等实现了Comparable接口，重写了compareTo()方法，给出了比较两个对象大小的规则。</li>
-<li>像String、包装类重写compareTo()方法后，进行了从小到大的排列。</li>
-<li>重写compareTo()的规则：<br>-&gt;如果当前对象this大于形参对象obj，则返回正整数，如果小于返回负数，等于返回零。</li>
-</ol>
-<hr>
-<h2 id="Comparator"><a href="#Comparator" class="headerlink" title="Comparator"></a>Comparator</h2><p>Comparable接口使用：定制排序</p>
-<ol>
-<li>背景：当元素的类型没有实现Comparable接口而又不方便修改代码，或者实现了Comparable接口的排序规则不适合当前的操作，那么可以考虑使用Comparator的对象来排序。</li>
-<li>重写compare(Object o1, Object o2)方法，比较o1和o2的大小：如果方法返回正整数，则表示o1&gt;o2。</li>
+<li>传输控制协议 TCP（Transmission Control Protocol）–提供面向连接的，可靠的数据传输服务。</li>
+<li>用户数据协议 UDP（User Datagram Protocol）–提供无连接的，尽最大努力的数据传输服务（不保证数据传输的可靠性）。</li>
 </ol>
 
                 
@@ -502,7 +498,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://whynot_lihao.github.io/2021/05/25/Comparable%E5%92%8CComparator/">http://whynot_lihao.github.io/2021/05/25/Comparable%E5%92%8CComparator/</a>
+                    <a href="http://whynot_lihao.github.io/2021/12/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%9D%A2%E8%AF%95%E9%A2%98/">http://whynot_lihao.github.io/2021/12/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%9D%A2%E8%AF%95%E9%A2%98/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -709,9 +705,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2021/12/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%9D%A2%E8%AF%95%E9%A2%98/">
                     <div class="card-image">
@@ -729,9 +726,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -740,6 +737,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -750,13 +748,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/14/My-first-blog/">
+                <a href="/2021/05/25/Comparable%E5%92%8CComparator/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="My first blog">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Comparable?Comparator?">
                         
-                        <span class="card-title">My first blog</span>
+                        <span class="card-title">Comparable?Comparator?</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -767,7 +765,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-25
                             </span>
                         <span class="publish-author">
                             

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="比较器, Hexo">
+    <meta name="keywords" content="MyBatis入门, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>比较器 | Hexo</title>
+    <title>MyBatis入门 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">比较器</h1>
+                    <h1 class="description center-align post-title">MyBatis入门</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-05-25
+                    2021-05-24
                 </div>
                 
 
@@ -464,18 +464,24 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Comparable"><a href="#Comparable" class="headerlink" title="Comparable"></a>Comparable</h2><p>Comparable接口使用：自然排序</p>
-<ol>
-<li>像String、包装类等实现了Comparable接口，重写了compareTo()方法，给出了比较两个对象大小的规则。</li>
-<li>像String、包装类重写compareTo()方法后，进行了从小到大的排列。</li>
-<li>重写compareTo()的规则：<br>-&gt;如果当前对象this大于形参对象obj，则返回正整数，如果小于返回负数，等于返回零。</li>
+                <h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><ol>
+<li>新建Maven工程，pom.xml引入依赖</li>
+<li>创建数据表</li>
+<li>创建数据表对应的实体类</li>
+<li>创建MyBatis的配置文件，配置MyBatis运行环境-&gt;<br>配置JDBC事务管理、POOLED配置数据源连接池（driver,url,username,password）</li>
+<li>使用</li>
 </ol>
 <hr>
-<h2 id="Comparator"><a href="#Comparator" class="headerlink" title="Comparator"></a>Comparator</h2><p>Comparable接口使用：定制排序</p>
-<ol>
-<li>背景：当元素的类型没有实现Comparable接口而又不方便修改代码，或者实现了Comparable接口的排序规则不适合当前的操作，那么可以考虑使用Comparator的对象来排序。</li>
-<li>重写compare(Object o1, Object o2)方法，比较o1和o2的大小：如果方法返回正整数，则表示o1&gt;o2。</li>
+<h2 id="使用原生接口"><a href="#使用原生接口" class="headerlink" title="使用原生接口"></a>使用原生接口</h2><ol>
+<li>MyBatis框架需要开发者自定义SQL语句，写在Mapper.xml文件中，实际开发中，会为<br>每个实体类创建对应的Mapper.xml，定义管理该对象数据的SQL。</li>
 </ol>
+<p>-&gt; namespace通常设置为文件所在包+文件名的形式。<br>-&gt; insert/select/upadate/delete标签表示执行操作。<br>-&gt; id时实际调用MyBatis方法时需要用的参数。<br>-&gt; parameterType是调用对应方法时参数的数据类型。<br>2. 在全局配置文件config.xml中注册AccountMapper.xml。<br>3. 调用MyBatis原生接口进行操作<br>statement标签可根据SQL执行的业务选择insert/select/upadate/delete。<br>MyBatis框架会根据规则自动创建接口实现类的代理对象。<br>规则：<br>-&gt; Mapper.xml中namespace为接口的全类名。<br>-&gt; Mapper.xml中statement的id为接口中对应的方法名。<br>-&gt; Mapper.xml中statement的parameterType和接口中对应的方法的参数类型一致。<br>-&gt; Mapper.xml中statement的resultType和接口中对应方法的返回值类型一致。</p>
+<hr>
+<h2 id="通过Mapper代理实现自定义接口"><a href="#通过Mapper代理实现自定义接口" class="headerlink" title="通过Mapper代理实现自定义接口"></a>通过Mapper代理实现自定义接口</h2><ol>
+<li>自定义接口，定义相关业务方法。</li>
+<li>编写与方法相对应的Mapper.xml，定义接口方法对应的SQL语句，不需要创建接口实现类。<br>statement标签可根据SQL执行的业务选择insert/select/upadate/delete。MyBatis框架会根据规则自动创建接口实现类的代理对象。</li>
+</ol>
+<p>-&gt; Mapper.xml中namespace为接口的全类名。<br>-&gt; Mapper.xml中statement的id为接口中对应的方法名。<br>-&gt; Mapper.xml中statement的parameterType和接口中对应的方法的参数类型一致。<br>-&gt; Mapper.xml中statement的resultType和接口中对应方法的返回值类型一致。</p>
 
                 
             </div>
@@ -502,7 +508,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://whynot_lihao.github.io/2021/05/25/Comparable%E5%92%8CComparator/">http://whynot_lihao.github.io/2021/05/25/Comparable%E5%92%8CComparator/</a>
+                    <a href="http://whynot_lihao.github.io/2021/05/24/Mybatis/">http://whynot_lihao.github.io/2021/05/24/Mybatis/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -713,13 +719,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2021/12/28/2021-12-28%EF%BC%81%EF%BC%81/">
+                <a href="/2021/05/25/Comparable%E5%92%8CComparator/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="2021-12-28！！">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="比较器">
                         
-                        <span class="card-title">2021-12-28！！</span>
+                        <span class="card-title">比较器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -730,7 +736,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-28
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-25
                         </span>
                         <span class="publish-author">
                             
@@ -750,13 +756,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/24/Mybatis/">
+                <a href="/2021/05/15/%E8%B7%B3%E5%8F%B0%E9%98%B6%E9%97%AE%E9%A2%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="MyBatis入门">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="跳台阶问题@_@">
                         
-                        <span class="card-title">MyBatis入门</span>
+                        <span class="card-title">跳台阶问题@_@</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -767,7 +773,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-15
                             </span>
                         <span class="publish-author">
                             

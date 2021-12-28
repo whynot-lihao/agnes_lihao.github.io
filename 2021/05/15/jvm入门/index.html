@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="比较器, Hexo">
+    <meta name="keywords" content="深入理解JVM, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>比较器 | Hexo</title>
+    <title>深入理解JVM | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">比较器</h1>
+                    <h1 class="description center-align post-title">深入理解JVM</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-05-25
+                    2021-05-15
                 </div>
                 
 
@@ -464,18 +464,35 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Comparable"><a href="#Comparable" class="headerlink" title="Comparable"></a>Comparable</h2><p>Comparable接口使用：自然排序</p>
-<ol>
-<li>像String、包装类等实现了Comparable接口，重写了compareTo()方法，给出了比较两个对象大小的规则。</li>
-<li>像String、包装类重写compareTo()方法后，进行了从小到大的排列。</li>
-<li>重写compareTo()的规则：<br>-&gt;如果当前对象this大于形参对象obj，则返回正整数，如果小于返回负数，等于返回零。</li>
+                <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
+<li>JVM位置</li>
+<li>JVM体系结构</li>
+<li>类加载器</li>
+<li>双亲委派机制</li>
+<li>沙箱安全机制</li>
+<li>Native</li>
+<li>PC寄存器</li>
+<li>方法区</li>
+<li>栈</li>
+<li>三种JVM</li>
+<li>堆</li>
+<li>新生区、老年区</li>
+<li>永久区</li>
+<li>堆内存调优</li>
+<li>GC</li>
+<li>JMM</li>
+<li>总结</li>
 </ol>
 <hr>
-<h2 id="Comparator"><a href="#Comparator" class="headerlink" title="Comparator"></a>Comparator</h2><p>Comparable接口使用：定制排序</p>
-<ol>
-<li>背景：当元素的类型没有实现Comparable接口而又不方便修改代码，或者实现了Comparable接口的排序规则不适合当前的操作，那么可以考虑使用Comparator的对象来排序。</li>
-<li>重写compare(Object o1, Object o2)方法，比较o1和o2的大小：如果方法返回正整数，则表示o1&gt;o2。</li>
+<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><ol>
+<li>堆里面的分区有哪些？</li>
+<li>JVM的内存模型和分区？</li>
+<li>GC的算法有哪些？<br>标记清除法，标记压缩，复制算法，引用计数</li>
+<li>轻GC和重GC什么时候发生？</li>
 </ol>
+<hr>
+<p>##Reference</p>
+<p>KuangStudy</p>
 
                 
             </div>
@@ -502,7 +519,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://whynot_lihao.github.io/2021/05/25/Comparable%E5%92%8CComparator/">http://whynot_lihao.github.io/2021/05/25/Comparable%E5%92%8CComparator/</a>
+                    <a href="http://whynot_lihao.github.io/2021/05/15/jvm%E5%85%A5%E9%97%A8/">http://whynot_lihao.github.io/2021/05/15/jvm%E5%85%A5%E9%97%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -713,13 +730,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2021/12/28/2021-12-28%EF%BC%81%EF%BC%81/">
+                <a href="/2021/05/15/%E8%B7%B3%E5%8F%B0%E9%98%B6%E9%97%AE%E9%A2%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="2021-12-28！！">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="跳台阶问题@_@">
                         
-                        <span class="card-title">2021-12-28！！</span>
+                        <span class="card-title">跳台阶问题@_@</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -730,7 +747,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-28
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-15
                         </span>
                         <span class="publish-author">
                             
@@ -750,13 +767,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/24/Mybatis/">
+                <a href="/2021/05/14/My-first-blog/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="MyBatis入门">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="My first blog">
                         
-                        <span class="card-title">MyBatis入门</span>
+                        <span class="card-title">My first blog</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -767,7 +784,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-14
                             </span>
                         <span class="publish-author">
                             

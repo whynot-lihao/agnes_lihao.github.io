@@ -512,25 +512,20 @@ name VARCHAR(20)
 <li>查看表的存储引擎 show table status like “table_name” ;            </li>
 </ul>
 <h3 id="MyISAM-和-InnoDB-的区别"><a href="#MyISAM-和-InnoDB-的区别" class="headerlink" title="MyISAM 和 InnoDB 的区别"></a>MyISAM 和 InnoDB 的区别</h3><ol>
-<li>是否支持行级锁</li>
+<li>是否支持行级锁<br> MyISAM 只有表级锁(table-level locking)，而 InnoDB 支持行级锁(row-level locking)和表级锁,默认为行级锁。</li>
 </ol>
-<p>MyISAM 只有表级锁(table-level locking)，而 InnoDB 支持行级锁(row-level locking)和表级锁,默认为行级锁。</p>
 <p>也就说，MyISAM 一锁就是锁住了整张表，这在并发写的情况下是多么滴憨憨啊！这也是为什么 InnoDB 在并发写的时候，性能更牛皮了！</p>
 <ol start="2">
-<li>是否支持事务</li>
+<li><p>是否支持事务<br> MyISAM 不提供事务支持。<br> InnoDB 提供事务支持，具有提交(commit)和回滚(rollback)事务的能力。</p>
+</li>
+<li><p>是否支持外键<br> MyISAM 不支持，而 InnoDB 支持。</p>
+</li>
 </ol>
-<p>MyISAM 不提供事务支持。</p>
-<p>InnoDB 提供事务支持，具有提交(commit)和回滚(rollback)事务的能力。</p>
-<ol start="3">
-<li>是否支持外键</li>
-</ol>
-<p>MyISAM 不支持，而 InnoDB 支持。</p>
 <p>🌈 拓展一下：</p>
 <p>一般我们也是不建议在数据库层面使用外键的，应用层面可以解决。不过，这样会对数据的一致性造成威胁。具体要不要使用外键还是要根据你的项目来决定。</p>
 <ol start="4">
-<li>是否支持数据库异常崩溃后的安全恢复</li>
+<li>是否支持数据库异常崩溃后的安全恢复<br> MyISAM 不支持，而 InnoDB 支持。</li>
 </ol>
-<p>MyISAM 不支持，而 InnoDB 支持。</p>
 <p>使用 InnoDB 的数据库在异常崩溃后，数据库重新启动的时候会保证数据库恢复到崩溃前的状态。这个恢复的过程依赖于 redo log 。</p>
 <p>🌈 拓展一下：</p>
 <ul>
@@ -1106,7 +1101,7 @@ name VARCHAR(20)
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2019-2022</span>
             
             <span id="year">2019</span>
             <a href="/about" target="_blank">Hao Li</a>

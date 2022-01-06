@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="My first blog, Hexo">
+    <meta name="keywords" content="Comparable?Comparator?, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>My first blog | Hexo</title>
+    <title>Comparable?Comparator? | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">My first blog</h1>
+                    <h1 class="description center-align post-title">Comparable?Comparator?</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-05-14
+                    2021-05-25
                 </div>
                 
 
@@ -464,7 +464,18 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="START"><a href="#START" class="headerlink" title="START"></a>START</h2><p>Hello, world!<br>This is whynot’blog!<br>source/images/topology.png<br><img src="/images/topology.png" alt="(可以写关于图片的描述)"></p>
+                <h2 id="Comparable"><a href="#Comparable" class="headerlink" title="Comparable"></a>Comparable</h2><p>Comparable接口使用：自然排序</p>
+<ol>
+<li>像String、包装类等实现了Comparable接口，重写了compareTo()方法，给出了比较两个对象大小的规则。</li>
+<li>像String、包装类重写compareTo()方法后，进行了从小到大的排列。</li>
+<li>重写compareTo()的规则：<br>-&gt;如果当前对象this大于形参对象obj，则返回正整数，如果小于返回负数，等于返回零。</li>
+</ol>
+<hr>
+<h2 id="Comparator"><a href="#Comparator" class="headerlink" title="Comparator"></a>Comparator</h2><p>Comparable接口使用：定制排序</p>
+<ol>
+<li>背景：当元素的类型没有实现Comparable接口而又不方便修改代码，或者实现了Comparable接口的排序规则不适合当前的操作，那么可以考虑使用Comparator的对象来排序。</li>
+<li>重写compare(Object o1, Object o2)方法，比较o1和o2的大小：如果方法返回正整数，则表示o1&gt;o2。</li>
+</ol>
 
                 
             </div>
@@ -491,7 +502,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://whynot_lihao.github.io/2021/05/14/My-first-blog/">http://whynot_lihao.github.io/2021/05/14/My-first-blog/</a>
+                    <a href="http://whynot_lihao.github.io/2021/05/25/linux/">http://whynot_lihao.github.io/2021/05/25/linux/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -702,7 +713,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2021/05/25/linux/">
+                <a href="/2021/05/25/Comparable%E5%92%8CComparator/">
                     <div class="card-image">
                         
                         
@@ -739,13 +750,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/14/JAVA/">
+                <a href="/2021/05/14/My-first-blog/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="JAVA基础">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="My first blog">
                         
-                        <span class="card-title">JAVA基础</span>
+                        <span class="card-title">My first blog</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
